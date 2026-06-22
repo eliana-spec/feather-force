@@ -500,21 +500,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
         <div class="tier-bottom">
           <div class="tier-desc">The transfer from the coach station to the hospital door.</div>
           <div class="tier-anchor">A single transfer costs R120. You're most of the way there.</div>
-          <form action="https://www.payfast.co.za/eng/process" method="post" style="margin:0;">
-          <input type="hidden" name="merchant_id" value="12000750">
-          <input type="hidden" name="merchant_key" value="5r7zqj9gw30bt">
-          <input type="hidden" name="subscription_type" value="1">
-          <input type="hidden" name="frequency" value="3">
-          <input type="hidden" name="cycles" value="0">
-          <input type="hidden" name="return_url" value="https://www.wingsandwishes.org">
-          <input type="hidden" name="cancel_url" value="https://www.wingsandwishes.org">
-          <input type="hidden" name="notify_url" value="">
-          <input type="hidden" name="amount" value="99.00">
-          <input type="hidden" name="item_name" value="Feather Force - The Spark">
-          <button type="submit" class="btn-primary" style="margin-top:18px;width:100%;">Give Monthly
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </button>
-        </form>
+          <button class="btn-final" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">Give to Feather Force
+        
+      </button>
         </div>
       </div>
       <div class="tier featured">
