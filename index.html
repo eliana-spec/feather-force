@@ -227,6 +227,42 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
 .footer-sub{font-size:12.5px;color:rgba(255,255,255,0.4);line-height:1.95;max-width:400px;}
 .footer-contact{font-size:13.5px;color:rgba(255,255,255,0.45);line-height:2.1;text-align:right;}
 .footer-contact a{color:var(--sky);text-decoration:none;font-weight:700;}
+
+/* ── MOBILE BREAKPOINTS ─────────────────────────────────── */
+@media(max-width:900px){
+  .wrap,.wrap-narrow{padding:0 28px;}
+  .hero-grid{grid-template-columns:1fr;padding:56px 28px 48px;gap:40px;}
+  .hero-photo{display:none;}
+  .hero-h1{font-size:clamp(30px,7vw,44px);}
+  .sol-grid{grid-template-columns:1fr;gap:40px;}
+  .how-grid{grid-template-columns:1fr 1fr;gap:14px;}
+  .stories-grid{grid-template-columns:1fr;}
+  .test-grid{grid-template-columns:1fr;gap:0;}
+  .doctors-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:16px;}
+  .tiers-row{grid-template-columns:1fr;gap:18px;}
+  .tier.featured{transform:none;}
+  .gallery-strip{grid-template-columns:repeat(3,1fr);height:200px;}
+  .final-cta{grid-template-columns:1fr;}
+  .final-img{height:300px;}
+  .final-content{padding:48px 28px;}
+  .noncedo{padding:64px 28px;}
+  .hero-grid>div:first-child{order:1;}
+}
+@media(max-width:600px){
+  .wrap,.wrap-narrow{padding:0 20px;}
+  .hero-grid{padding:40px 20px 36px;}
+  .how-grid{grid-template-columns:1fr;}
+  .stats-grid{grid-template-columns:1fr;}
+  .gallery-strip{grid-template-columns:repeat(2,1fr);height:180px;}
+  .tiers-row{gap:14px;}
+  .nav .wrap{padding:0 20px;}
+  .section{padding:56px 0;}
+  .final-content{padding:40px 20px;}
+  .hero-trust{flex-direction:column;gap:10px;}
+  .dq-grid{grid-template-columns:1fr;}
+  .inge-card{padding:32px 24px;}
+}
 </style>
 </head>
 <body>
@@ -242,10 +278,11 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
   <div class="hero-blob1"></div><div class="hero-blob2"></div>
   <div class="hero-grid">
     <div>
+      <div class="hero-eyebrow">Feather Force: Wings &amp; Wishes' Monthly Giving.</div>
       <h1 class="hero-h1">There are children in South Africa who can't get life-saving treatment. Because they can't afford <span class="ai-white">to get there.</span></h1>
       <div class="hero-bridge">Your monthly gift changes that.</div>
       <p class="hero-sub">Help Wings &amp; Wishes cover the travel costs for critically ill children, so they can reach the life-saving medical care they need.</p>
-      <p style="font-size:12px;color:rgba(255,255,255,0.55);font-weight:600;letter-spacing:0.3px;margin-bottom:18px;">Feather Force is Wings &amp; Wishes' monthly giving programme.</p>
+      <p style="font-size:14px;color:rgba(255,255,255,0.80);font-weight:600;letter-spacing:0.2px;margin-bottom:18px;">Feather Force is Wings &amp; Wishes' monthly giving programme.</p>
       <button class="hero-btn" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">Give to Feather Force
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
       </button>
@@ -584,7 +621,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
       <h2 class="h2 h2-dark" style="margin-bottom:32px;">Everything you might <span class="ai">want to know.</span></h2>
     </div>
     <div class="faq reveal">
-      <div class="faq-item"><div class="faq-q">Is Wings &amp; Wishes a registered NPO?</div><div class="faq-a">Yes. Registered in South Africa since 2006. Your donation qualifies for a Section 18A tax deduction. [NPO number to be confirmed]</div></div>
+      <div class="faq-item"><div class="faq-q">Is Wings &amp; Wishes a registered NPO?</div><div class="faq-a">Yes. Registered in South Africa since 2006. Your donation qualifies for a Section 18A tax deduction. NPO registration number: 069-182.</div></div>
       <div class="faq-item"><div class="faq-q">Does 100% of my donation go to transport?</div><div class="faq-a">Every rand goes directly to travel costs. Our website is run by a volunteer, and our operations are lean by design — so when you give, it moves. Straight to a flight, a coach ticket, or a transfer to the hospital door.</div></div>
       <div class="faq-item"><div class="faq-q">What conditions do the children have?</div><div class="faq-a">Any child travelling more than 150km for specialist care qualifies — cancer, heart conditions, organ transplants, retinoblastoma, rare diseases, bone marrow conditions. Any illness, any child. If the treatment isn't available near home, we help them reach it.</div></div>
       <div class="faq-item"><div class="faq-q">Won't the government cover this?</div><div class="faq-a">Families must first apply for state hospital transport and prove it isn't available before we step in. We are the safety net for when the system can't help — and for these 600 children, it can't.</div></div>
@@ -617,7 +654,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
   <div class="wrap">
     <div>
       <div class="footer-org">Wings &amp; Wishes</div>
-      <div class="footer-sub">Registered NPO since 2006 · Section 18A approved<br>The only registered NPO in South Africa focused exclusively on transport for critically ill children.<br>[NPO registration number to be confirmed]</div>
+      <div class="footer-sub">Registered NPO since 2006 · Section 18A approved<br>The only registered NPO in South Africa focused exclusively on transport for critically ill children.<br>NPO registration number: 069-182.</div>
     </div>
     <div class="footer-contact">
       <a href="mailto:inge.h@wingsandwishes.org">inge.h@wingsandwishes.org</a><br>
