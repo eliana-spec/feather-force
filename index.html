@@ -243,7 +243,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
   .stats-grid{grid-template-columns:1fr 1fr;gap:16px;}
   .tiers-row{grid-template-columns:1fr;gap:18px;}
   .tier.featured{transform:none;}
-  .gallery-strip{grid-template-columns:repeat(3,1fr);height:200px;}
+  .gallery-strip{display:flex;grid-template-columns:none;overflow-x:auto;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity;height:200px;}
+  .gallery-item{flex:0 0 42%;scroll-snap-align:start;}
   .final-cta{grid-template-columns:1fr;}
   .final-img{height:300px;}
   .final-content{padding:48px 28px;}
@@ -255,7 +256,8 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
   .hero-grid{padding:40px 20px 36px;}
   .how-grid{grid-template-columns:1fr;}
   .stats-grid{grid-template-columns:1fr;}
-  .gallery-strip{grid-template-columns:repeat(2,1fr);height:180px;}
+  .gallery-strip{height:160px;}
+  .gallery-item{flex:0 0 62%;}
   .tiers-row{gap:14px;}
   .nav .wrap{padding:0 20px;}
   .nav-btn{padding:12px 20px;}
