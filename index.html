@@ -34,11 +34,12 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
 
 /* NAV */
 .nav{position:sticky;top:0;background:rgba(253,250,246,0.93);backdrop-filter:blur(20px);z-index:100;border-bottom:1px solid rgba(216,238,245,0.85);}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;min-height:68px;gap:12px;}
 .nav-name{font-size:18px;font-weight:800;color:var(--teal);letter-spacing:-0.3px;}
 .nav-sub{font-size:9.5px;color:var(--text-light);letter-spacing:1.2px;text-transform:uppercase;font-weight:600;margin-top:1px;}
-.nav-btn{background:var(--teal);color:#fff;border:none;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.25s;box-shadow:0 2px 12px rgba(43,168,160,0.25);}
+.nav-btn{background:var(--teal);color:#fff;border:none;padding:12px 28px;border-radius:50px;font-size:14px;font-weight:700;cursor:pointer;font-family:inherit;transition:all 0.25s;box-shadow:0 2px 12px rgba(43,168,160,0.25);white-space:nowrap;flex-shrink:0;}
 .nav-btn:hover{background:var(--teal-dark);transform:translateY(-1px);box-shadow:0 6px 20px rgba(43,168,160,0.35);}
+.nav-btn-short{display:none;}
 
 /* HERO */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;background:linear-gradient(135deg,#005a82 0%,#0076A8 55%,#0e87ba 100%);overflow:hidden;}
@@ -257,6 +258,9 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
   .gallery-strip{grid-template-columns:repeat(2,1fr);height:180px;}
   .tiers-row{gap:14px;}
   .nav .wrap{padding:0 20px;}
+  .nav-btn{padding:12px 20px;}
+  .nav-btn-full{display:none;}
+  .nav-btn-short{display:inline;}
   .section{padding:56px 0;}
   .final-content{padding:40px 20px;}
   .hero-trust{flex-direction:column;gap:10px;}
@@ -270,7 +274,7 @@ body{font-family:'Plus Jakarta Sans',sans-serif;color:var(--charcoal);background
 <nav class="nav">
   <div class="wrap">
     <div><div class="nav-name">Wings & Wishes</div><div class="nav-sub">Transporting critically ill children since 2006</div></div>
-    <button class="nav-btn" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})">Give to Feather Force</button>
+    <button class="nav-btn" onclick="document.getElementById('tiers').scrollIntoView({behavior:'smooth'})"><span class="nav-btn-full">Give to Feather Force</span><span class="nav-btn-short">Donate</span></button>
   </div>
 </nav>
 
